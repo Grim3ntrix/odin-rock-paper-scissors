@@ -1,3 +1,7 @@
+// Step 1
+
+console.log("Hello World!");
+
 // Step 2
 
 function getComputerChoice() {
@@ -50,14 +54,41 @@ function playRound(humanChoice, computerChoice) {
         console.log("Computer Score:", computerScore);
         console.log("Draw!");
     } else {
+        computerScore++;
+        console.log("Human Score:", humanScore);
+        console.log("Computer Score:", computerScore);
         console.log("You Loss!", `${computerChoice}` + " beats " + `${humanChoice}`);
     }
 }
 
-const humanSelection    = getHumanChoice();
-const computerSelection = getComputerChoice();
+// Step 6
 
-console.log("Human Choice: ",humanSelection);
-console.log("Computer Choice: ",computerSelection);
+function playGame() {
 
-playRound(humanSelection, computerSelection);
+    const humanSelection    = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    console.log("Human Choice: ",humanSelection);
+    console.log("Computer Choice: ",computerSelection);
+
+    playRound(humanSelection, computerSelection);
+
+}
+
+let rounds = 5;
+
+for (let i = 0; i < rounds; i++) {
+    playGame();
+    console.log("\n");
+
+    if (i === 4) {
+        if (humanScore > computerScore) {
+            console.log("Congratulations! The final winner is ** Human **");
+        } else if (humanScore < computerScore) {
+            console.log("Congratulations! The final winner is ** Computer **");
+        } else {
+            console.log("Ops! No winner! ** Draw **");
+        }
+    }
+
+}
