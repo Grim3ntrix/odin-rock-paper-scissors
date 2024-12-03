@@ -19,9 +19,12 @@ console.log(getComputerChoice());
 
 function getHumanChoice() {
 
-    let humanChoice = prompt('Please chose in the following ("rock, paper, scissors"):');
+    let humanChoice = prompt('Please chose in the following ("rock, paper, scissors")');
 
     return humanChoice;
 }
 
 console.log(getHumanChoice());
+
+let humanScore    = 0;
+let computerScore = 0;
