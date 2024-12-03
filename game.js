@@ -1,14 +1,27 @@
+// Step 2
+
 function getComputerChoice() {
 
-    let random = Math.floor(Math.random() * 3);
+    let computerChoice = Math.floor(Math.random() * 3);
 
-    if (random === 1) {
+    if (computerChoice === 1) {
         return "rock";
-    } else if (random === 2) {
+    } else if (computerChoice === 2) {
         return "paper";
     } else {
-        return "scissor";
+        return "scissors";
     }
 }
 
 console.log(getComputerChoice());
+
+// Step 3
+
+function getHumanChoice() {
+
+    let humanChoice = prompt('Please chose in the following ("rock, paper, scissors"):');
+
+    return humanChoice;
+}
+
+console.log(getHumanChoice());
